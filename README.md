@@ -1,4 +1,4 @@
-# GaCD_assignment
+##Getting and Cleaning Data programming assignment
 Repository for programming assignment for Getting and Cleaning Data on Coursera
 
 The files in this repository are as follows:

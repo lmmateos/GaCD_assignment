@@ -2,17 +2,26 @@
 
 This code book describes the variables, the data, and transformations or work performed to clean up the data to produce a tidy data set from the source data.
 
-One of the most exciting areas in all of data science right now is wearable computing. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained: 
-
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
-
-Here are the data for the project: 
+The source data for this programming assignment is downloaded from this link:
 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
-In this programming assignment, one R script called run_analysis.R is developed that does the following:
-1 Merges the training and the test sets to create one data set.
-2 Extracts only the measurements on the mean and standard deviation for each measurement. 
-3 Uses descriptive activity names to name the activities in the data set.
-4 Appropriately labels the data set with descriptive variable names. 
-5 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+Once unzipped, the following files are found in directory "UCI HAR Dataset":  
+- activity_labels.txt (used by script)  
+- features_info.txt  
+- features.txt (used by script)  
+- README.txt  
+- subdirectory "test" with files:  
+      - subdirectory "Inertial Signals" with 9 files  
+      - subject_test.txt (used by script)  
+      - X_test.txt (used by script)  
+      - y_test.txt (used by script)  
+- subdirectory "train" with files:  
+      - subdirectory "Inertial Signals" with 9 files  
+      - subject_train.txt (used by script)  
+      - X_train.txt (used by script)  
+      - y_train.txt (used by script)  
+
+The data of interest are all the statistical mean and standard deviation values.  These are contained in the "X_train.txt" and "X_test.txt" files along with other statistical values to be filtered out.  The "y_train.txt" and "y_test.txt" files contain the activities corresponding to each row in the "X" data.  The "subject_train.txt" and "subject_test.txt" files contain the subject identifiers corresponding to each row in the "X" data.  The "features.txt" file contains the variable identifiers corresponding to each column in the "X" data.
+
+In the resulting tidy data file, the selected statistical mean and standard deviation data (numeric data) is averaged by and ordered by corresponding subject identifier (an integer) and activity type (a character string).

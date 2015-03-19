@@ -43,9 +43,7 @@ Once unzipped, the following files are found in directory "UCI HAR Dataset":
 
 The data of interest are all the statistical mean and standard deviation values.  These are contained in the "X_train.txt" and "X_test.txt" files along with other statistical values to be filtered out.  The "y_train.txt" and "y_test.txt" files contain the activities corresponding to each row in the "X" data.  The "subject_train.txt" and "subject_test.txt" files contain the subject identifiers corresponding to each row in the "X" data.  The "features.txt" file contains the variable identifiers corresponding to each column in the "X" data.
 
-In the resulting tidy data file, the selected statistical mean and standard deviation data (numeric data) is averaged by and ordered by corresponding subject identifier (an integer) and activity type (a character string).
-
-The combination of the training and test data files provides 10299 observations of 561 variables. The variables of interest are the 66 statistical mean and standard deviation values as follows, where the initial number indicates the column in the sorce data set:
+The combination of the training and test data files provides 10299 observations of 561 variables. The variables of interest are the 66 statistical mean and standard deviation values as follows, where the initial number indicates the column in the sorce data set:  
 1 tBodyAcc-mean()-X  
 2 tBodyAcc-mean()-Y  
 3 tBodyAcc-mean()-Z  
@@ -187,7 +185,7 @@ These feature names are converted to syntactically valid R variable names by rep
 
 Note that the column order reflects selecting first the mean values as a group then the standard deviation values as a group.  
 
-For these last 66 variables, the 10299 observations are averaged over subjectID and activity resulting in a total of 180 average values (30 subject * 6 activities) for each variable in the final tidy data set.  
+For these last 66 variables, the 10299 observations (numeric data) are averaged over and ordered by subject identifier (an integer) and activity (a character string) resulting in a total of 180 average values (30 subject * 6 activities) for each variable in the final tidy data set.  
 
 ###References
 

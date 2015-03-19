@@ -113,7 +113,7 @@ The combination of the training and test data files provides 10299 observations 
 
 See the file "features_info.txt" in the source data for a description of the features.  
 
-These feature names are converted to syntactically valid R variable names by replacing non-alphanumeric characters with "."  Two variables are added to for subject ID (1-30) and activity (walking, walking_upstairs, walking_downstairs, sitting, standing and laying). The resulting variable names are:  
+These feature names are converted to syntactically valid R variable names by replacing non-alphanumeric characters with "."  Two variables are added for subject ID (1-30) and activity (walking, walking_upstairs, walking_downstairs, sitting, standing and laying). The resulting variable names are:  
 - subjectID
 - activity
 - tBodyAcc.mean...X  
